@@ -23,7 +23,7 @@ class NotKnownAssignment : AppCompatActivity() {
         val spinner: Spinner = findViewById(R.id.spinner)
         val imageView: ImageView = findViewById(R.id.imageView)
         val taskName: TextView = findViewById(R.id.taskName)
-        val checkBox: CheckBox = findViewById(R.id.checkBox)
+//        val checkBox: CheckBox = findViewById(R.id.checkBox)
         val line1: View = findViewById(R.id.line1)
         val line2: View = findViewById(R.id.line2)
 
@@ -69,7 +69,7 @@ class NotKnownAssignment : AppCompatActivity() {
             val taskDescription = taskName.text.toString()
             val date = dateView.text.toString()
             val time = timeView.text.toString()
-            val isCompleted = checkBox.isChecked
+//            val isCompleted = checkBox.isChecked
 
 
             Toast.makeText(this, "Task added!", Toast.LENGTH_SHORT).show()
