@@ -26,11 +26,9 @@ class DashboardActivity : AppCompatActivity() {
         val password = sharedPreferences.getString("password", "")
 
         if (email.isNullOrEmpty() || password.isNullOrEmpty()) {
-            // No data saved, hide or show a message
             emailTxt.text = "No data saved"
             passwordTxt.text = ""
         } else {
-            // Data exists, display it
             emailTxt.text = "Email: $email"
             passwordTxt.text = "Password: $password"
         }
