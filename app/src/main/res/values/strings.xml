@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">IndividualAndroid</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_home_fragment">Hello Home fragment</string>
+    <string name="hello_search_fragment">Hello Search fragment</string>
+    <string name="hello_profile_fragment">Hello Profile fragment</string>
+    <string name="hello_cancelled_order_tab_fragment">Hello cancelled order tab fragment</string>
+    <string name="hello_recent_order_tab_fragment">Hello recent order tab fragment</string>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>
