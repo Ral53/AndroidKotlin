@@ -1,4 +1,4 @@
-package com.example.classwork
+import com.example.classwork.MainActivity2
 
 import android.content.Intent
 import android.os.Bundle
