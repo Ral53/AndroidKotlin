@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="43dp"
+        android:text="Next"
+        android:textSize="17sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/againBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/againBtn" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/combinedLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/questionView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Score -->
+        <LinearLayout
+            android:id="@+id/scoreLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/lifeLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score : "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/scoreNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="10"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!-- Life -->
+        <LinearLayout
+            android:id="@+id/lifeLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="11dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/timeLayout"
+            app:layout_constraintStart_toEndOf="@+id/scoreLayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/life"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Life : "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lifeNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="3"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!-- Time -->
+        <LinearLayout
+            android:id="@+id/timeLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lifeLayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Time"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/timeNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="30"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/againBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="387dp"
+        android:text="Ok"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/exitBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solutionView" />
+
+    <TextView
+        android:id="@+id/questionView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="17dp"
+        android:background="#DDCFCF"
+        android:gravity="center"
+        android:text="Question"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/solutionView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/solutionView"
+        app:layout_constraintTop_toBottomOf="@+id/combinedLayout" />
+
+    <EditText
+        android:id="@+id/solutionView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="121dp"
+        android:background="#DDCFCF"
+        android:gravity="center"
+        android:hint="Enter your answer"
+        android:imeOptions="flagNoEnterAction"
+        android:inputType="text|textMultiLine"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/againBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
