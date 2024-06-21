@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/restuarantImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="#60DC0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/MyShapeAppearanceOverlay" />
+
+    <TextView
+        android:id="@+id/RestaurantName"
+        android:layout_width="170dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+        android:text="Chiya Hub"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/ResturantTime"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/restuarantImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ResturantCuisine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:text="Multi Cuisine"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/restuarantImage"
+        app:layout_constraintTop_toBottomOf="@+id/RestaurantName" />
+
+    <TextView
+        android:id="@+id/ResturantDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="7dp"
+        android:text="0.5km"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintStart_toEndOf="@+id/restuarantImage" />
+
+    <TextView
+        android:id="@+id/ResturantTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+        android:text="10am to 10pm"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/RestaurantLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="7dp"
+        android:text="Ganeshowr, Marga"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/restaurantRating"
+        app:layout_constraintStart_toEndOf="@+id/ResturantDistance" />
+
+    <TextView
+        android:id="@+id/restaurantRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:text="4.5"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ratingStar" />
+
+    <ImageView
+        android:id="@+id/ratingStar"
+        android:layout_width="21dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_star_rate_24" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restuarantImage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
